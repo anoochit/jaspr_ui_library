@@ -386,11 +386,11 @@ packages:
     dependency: "direct main"
     description:
       path: "."
-      ref: daisyui
-      resolved-ref: "95757aa1cb260ae0a827214a5d9c0076f39f2bcf"
+      ref: HEAD
+      resolved-ref: "0d1ecf568bd086216f377caa765774154822e33d"
       url: "https://github.com/anoochit/jaspr_ui.git"
     source: git
-    version: "1.0.0"
+    version: "1.1.0"
   jaspr_web_compilers:
     dependency: "direct dev"
     description:

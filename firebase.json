@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "jasprui-b7a4f",
     "public": "build/jaspr",
     "ignore": [
       "firebase.json",

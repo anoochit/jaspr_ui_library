@@ -11,6 +11,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+      # - name: Install Tailwindcss
+      #   run: npm install -g tailwindcss
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: "stable"
+      - name: "Build Jaspr"
+        run: |
+          dart pub global activate jaspr_cli
+          dart pub get
+          jaspr build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}

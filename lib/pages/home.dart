@@ -31,13 +31,15 @@ class HomeState extends State<Home> {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield div(
-        classes: "flex flex-col grow h-screen w-screen justify-center",
-        [
-          SwapFlip(
-            front: '😈',
-            back: '😇',
-          )
-        ]);
+    yield div(classes: "flex flex-col grow h-screen w-screen justify-center", [
+      SwapFlip(
+        front: div(classes: 'text-9xl', [
+          text('😈'),
+        ]),
+        back: div(classes: 'text-9xl', [
+          text('😇'),
+        ]),
+      )
+    ]);
   }
 }
