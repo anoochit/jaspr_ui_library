@@ -374,6 +374,23 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.6.0"
+  jaspr_tailwind:
+    dependency: "direct dev"
+    description:
+      name: jaspr_tailwind
+      sha256: "6bc8e5723d0b58816c71044e50b0f580e6518d9b6e6664e52fbbd81efc416705"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.3.0"
+  jaspr_ui:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: daisyui
+      resolved-ref: "95757aa1cb260ae0a827214a5d9c0076f39f2bcf"
+      url: "https://github.com/anoochit/jaspr_ui.git"
+    source: git
+    version: "1.0.0"
   jaspr_web_compilers:
     dependency: "direct dev"
     description:
@@ -703,4 +720,4 @@ packages:
     source: hosted
     version: "3.1.2"
 sdks:
-  dart: ">=3.5.0 <3.6.0"
+  dart: ">=3.5.3 <3.6.0"

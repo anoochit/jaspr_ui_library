@@ -1,13 +1,12 @@
 import 'package:jaspr/jaspr.dart';
-
-import '../components/counter.dart';
+import 'package:jaspr_ui/jaspr_ui.dart';
 
 // By using the @client annotation this component will be automatically compiled to javascript and mounted
 // on the client. Therefore:
 // - this file and any imported file must be compilable for both server and client environments.
 // - this component and any child components will be built once on the server during pre-rendering and then
 //   again on the client during normal rendering.
-@client
+// @client
 class Home extends StatefulComponent {
   const Home({super.key});
 
@@ -16,7 +15,6 @@ class Home extends StatefulComponent {
 }
 
 class HomeState extends State<Home> {
-
   @override
   void initState() {
     super.initState();
@@ -33,12 +31,13 @@ class HomeState extends State<Home> {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield section([
-      img(src: 'images/logo.png', width: 80),
-      h1([text('Welcome')]),
-      p([text('You successfully create a new Jaspr site.')]),
-      div(styles: Styles.box(height: 100.px), []),
-      const Counter(),
-    ]);
+    yield div(
+        classes: "flex flex-col grow h-screen w-screen justify-center",
+        [
+          SwapFlip(
+            front: '😈',
+            back: '😇',
+          )
+        ]);
   }
 }

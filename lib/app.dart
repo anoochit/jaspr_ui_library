@@ -2,7 +2,6 @@ import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_router/jaspr_router.dart';
 
 import 'components/header.dart';
-import 'pages/about.dart';
 import 'pages/home.dart';
 
 // The main component of your application.
@@ -24,8 +23,10 @@ class App extends StatelessComponent {
     yield div(classes: 'main', [
       const Header(),
       Router(routes: [
-        Route(path: '/', title: 'Home', builder: (context, state) => const Home()),
-        Route(path: '/about', title: 'About', builder: (context, state) => const About()),
+        Route(
+            path: '/',
+            title: 'Home',
+            builder: (context, state) => const Home()),
       ]),
     ]);
   }
@@ -34,16 +35,16 @@ class App extends StatelessComponent {
   //
   // By using the @css annotation, these will be rendered automatically to css inside the <head> of your page.
   // Must be a variable or getter of type [List<StyleRule>].
-  @css
-  static final styles = [
-    css('.main', [
-      // The '&' refers to the parent selector of a nested style rules.
-      css('&').box(height: 100.vh).flexbox(direction: FlexDirection.column, wrap: FlexWrap.wrap),
-      css('section').flexItem(flex: Flex(grow: 1)).flexbox(
-        direction: FlexDirection.column,
-        justifyContent: JustifyContent.center,
-        alignItems: AlignItems.center,
-      ),
-    ]),
-  ];
+  // @css
+  // static final styles = [
+  //   css('.main', [
+  //     // The '&' refers to the parent selector of a nested style rules.
+  //     css('&').box(height: 100.vh).flexbox(direction: FlexDirection.column, wrap: FlexWrap.wrap),
+  //     css('section').flexItem(flex: Flex(grow: 1)).flexbox(
+  //       direction: FlexDirection.column,
+  //       justifyContent: JustifyContent.center,
+  //       alignItems: AlignItems.center,
+  //     ),
+  //   ]),
+  // ];
 }
