@@ -12,6 +12,7 @@ dependencies:
   jaspr_ui:
     git:
       url: https://github.com/anoochit/jaspr_ui.git
+      ref: daisyui
 
 dev_dependencies:
   build_runner: ^2.4.0
